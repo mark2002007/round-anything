@@ -1,4 +1,4 @@
-// negative polyRoundExtrude example
+// negative polyround_extrude example
 
 include <Round-Anything-1.0.4/polyround.scad>
 
@@ -18,7 +18,7 @@ negativeRadiiPoints=[
 ];
 
 difference() {
-    polyRoundExtrude(radiiPoints,extrudeHeight, extrudeRadius, extrudeRadius,fn=20);
+    polyround_extrude(radiiPoints,extrudeHeight, extrudeRadius, extrudeRadius,fn=20);
     translate([0,0,-tiny])
-        polyRoundExtrude(negativeRadiiPoints,extrudeHeight+2*tiny, -extrudeRadius, -extrudeRadius,fn=20);
+        polyround_extrude(negativeRadiiPoints,extrudeHeight+2*tiny, -extrudeRadius, -extrudeRadius,fn=20);
 }

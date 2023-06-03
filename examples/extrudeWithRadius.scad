@@ -1,4 +1,4 @@
-// extrudeWithRadius example
+// extrude_with_radius example
 
 include <Round-Anything-1.0.4/polyround.scad>
 
@@ -10,4 +10,4 @@ radiiPoints=[
     [20,  20, 0.8 ],
     [10,  0,  10  ]
 ];
-extrudeWithRadius(3,0.5,0.5,5)polygon(polyRound(radiiPoints,30));
+extrude_with_radius(3,0.5,0.5,5)polygon(polyround(radiiPoints,30));

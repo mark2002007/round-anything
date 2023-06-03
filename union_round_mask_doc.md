@@ -1,18 +1,18 @@
-## unionRoundMask / unionRound  
+## union_round_mask / union_round  
 ---
 ### Union with round fillet at selected places. Created for Round-Anything by TLC123 (2021).  
 A shortcut for faster fillet union is enabled when the operation constrained to convex operands.  
-For most cases unionRoundMask / unionRound replaces MinkowskiRound.  
-Combined with a system of mask selectors, unionRound becomes even more versetile.
+For most cases union_round_mask / union_round replaces minkowski_round.  
+Combined with a system of mask selectors, union_round becomes even more versetile.
 
-![unionround-doc-example](https://user-images.githubusercontent.com/10944617/130456818-c5fd43d1-e6df-4e88-8474-aed1a0c3ca31.png)
+![union_round-doc-example](https://user-images.githubusercontent.com/10944617/130456818-c5fd43d1-e6df-4e88-8474-aed1a0c3ca31.png)
 
-## unionRoundMask 
+## union_round_mask 
 ---
 Union with round fillet at selected places.
-### module unionRoundMask(r=1, detail = 5 , q=70, epsilon = 1e-6, showMask = true , includeOperands = true) 
+### module union_round_mask(r=1, detail = 5 , q=70, epsilon = 1e-6, showMask = true , includeOperands = true) 
 
-Masks are a method to perform unionRound on selected only areas,  
+Masks are a method to perform union_round on selected only areas,  
 and circumvents the previous limitation to common convex work area.  
 Mask are essentially just common primitives that is used to mark out areas by intersection.
 
@@ -36,7 +36,7 @@ includeOperands:
 
 ### usage:
 ````
-unionRoundMask( r = 1 , detail = $preview ? 3 : 10 , q = $preview ? 30 : 70 )
+union_round_mask( r = 1 , detail = $preview ? 3 : 10 , q = $preview ? 30 : 70 )
 {
     yourObject1();
     yourObject2();
@@ -50,16 +50,16 @@ unionRoundMask( r = 1 , detail = $preview ? 3 : 10 , q = $preview ? 30 : 70 )
 ````
 
 ---
-## unionRound
+## union_round
 ---
-### module unionRound(r=1, detail = 5 , q=70,  epsilon = 1e-6 , includeOperands = true )
+### module union_round(r=1, detail = 5 , q=70,  epsilon = 1e-6 , includeOperands = true )
 
-Module unionRound is the underlying work module of unionRoundMask. 
+Module union_round is the underlying work module of union_round_mask. 
 It can be used by it self, in some cases faster but more raw.
 
 ### usage:
 ````
-unionRoundMask( r = 1 , detail = $preview ? 3 : 10 , q= $preview ? 30 : 70 )
+union_round_mask( r = 1 , detail = $preview ? 3 : 10 , q= $preview ? 30 : 70 )
 {
     yourObject1();
     yourObject2();
@@ -67,9 +67,9 @@ unionRoundMask( r = 1 , detail = $preview ? 3 : 10 , q= $preview ? 30 : 70 )
 ````
 
 ---
-## intersectionRound
+## intersection_round
 ---
-module intersectionRound(r, q=70,  epsilon = 1e-6,showOperands = true) 
+module intersection_round(r, q=70,  epsilon = 1e-6,showOperands = true) 
 prototype module  
 Undocumented for now.  
 

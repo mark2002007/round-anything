@@ -1,4 +1,4 @@
-// translateRadiiPoints example
+// translate_radii_points example
 
 include <Round-Anything-1.0.4/polyround.scad>
 
@@ -14,10 +14,10 @@ function nutCapture(startAndEndRadius=0)=[
   [boltR,         minT,      0],
   [boltR,         0,         startAndEndRadius],
 ];
-linear_extrude(3)translate([-5,0,0])polygon(polyRound(nutCapture(),20));
+linear_extrude(3)translate([-5,0,0])polygon(polyround(nutCapture(),20));
 
-negativeNutCapture=translateRadiiPoints(nutCapture(),tran=[5,0]);
-rotatedNegativeNutCapture=translateRadiiPoints(nutCapture(1),tran=[20,5],rot=90);
+negativeNutCapture=translate_radii_points(nutCapture(),tran=[5,0]);
+rotatedNegativeNutCapture=translate_radii_points(nutCapture(1),tran=[20,5],rot=90);
 aSquare=concat(
   [[0,0,0]],
   negativeNutCapture,
@@ -27,4 +27,4 @@ aSquare=concat(
   [[0,10,0]]
 );
 
-linear_extrude(3)polygon(polyRound(aSquare,20));
+linear_extrude(3)polygon(polyround(aSquare,20));

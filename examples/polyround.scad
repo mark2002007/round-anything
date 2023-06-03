@@ -1,4 +1,4 @@
-// polyRound example
+// polyround example
 
 include <Round-Anything-1.0.4/polyround.scad>
 
@@ -10,4 +10,4 @@ radiiPoints=[
     [20, 20, 0.8 ],
     [10, 0,  10  ]
 ];
-linear_extrude(3)polygon(polyRound(radiiPoints,30));
+linear_extrude(3)polygon(polyround(radiiPoints,30));

@@ -21,9 +21,9 @@ radiiPoints=[
 ];
 
 linear_extrude(1){
-  shell2d(-0.5)polygon(polyRound(radiiPoints,30));
+  shell2d(-0.5)polygon(polyround(radiiPoints,30));
   translate([0,-10,0])shell2d(-0.5){
-    polygon(polyRound(radiiPoints,30));
+    polygon(polyround(radiiPoints,30));
     translate([8,8])gridpattern(memberW = 0.3, sqW = 1, iter = 17, r = 0.2);
   }
 }

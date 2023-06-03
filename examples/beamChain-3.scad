@@ -1,4 +1,4 @@
-// beamChain example 3
+// beam_chain example 3
 
 include <Round-Anything-1.0.4/polyround.scad>
 
@@ -25,26 +25,26 @@ clipP=[
 linear_extrude(1){
   // end hook
   translate([-15,-7*5+3,0]){
-    polygon(polyRound(clipP,20));
+    polygon(polyround(clipP,20));
   }
 
   // Attached to the end of the beam chain by dividing the beam paths in forward and return and
   // concat other polygon inbetween
   translate([0,-7*6,0]){
     radiiPoints=beamPoints(2,1);
-    forwardPath=beamChain(radiiPoints,offset1=0.5,startAngle=-15,mode=2);
-    returnPath=revList(beamChain(radiiPoints,offset1=-0.5,startAngle=-15,mode=2));
+    forwardPath=beam_chain(radiiPoints,offset1=0.5,startAngle=-15,mode=2);
+    returnPath=reverse_list(beam_chain(radiiPoints,offset1=-0.5,startAngle=-15,mode=2));
     entirePath=concat(forwardPath,clipP,returnPath);
-    polygon(polyRound(entirePath,20));
+    polygon(polyround(entirePath,20));
   }
 
   // Add transitioning radii into the end polygong
   translate([0,-7*7-2,0]){
     radiiPoints=beamPoints(2,1,rEnd=3);
-    forwardPath=beamChain(radiiPoints,offset1=0.5,startAngle=-15,mode=2);
-    returnPath=revList(beamChain(radiiPoints,offset1=-0.5,startAngle=-15,mode=2));
+    forwardPath=beam_chain(radiiPoints,offset1=0.5,startAngle=-15,mode=2);
+    returnPath=reverse_list(beam_chain(radiiPoints,offset1=-0.5,startAngle=-15,mode=2));
     entirePath=concat(forwardPath,clipP,returnPath);
-    polygon(polyRound(entirePath,20));
+    polygon(polyround(entirePath,20));
   }
 
 }

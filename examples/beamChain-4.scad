@@ -1,4 +1,4 @@
-// beamChain example 4
+// beam_chain example 4
 
 include <Round-Anything-1.0.4/polyround.scad>
 
@@ -15,7 +15,7 @@ linear_extrude(1){
   translate([0,-7*9,0]){
     // Define multiple shells from the the one set of points
     for(i=[0:2]){
-      polygon(polyRound(beamChain(beamPoints(2,1),offset1=-1+i*0.4, offset2=-1+i*0.4+0.25),20));
+      polygon(polyround(beam_chain(beamPoints(2,1),offset1=-1+i*0.4, offset2=-1+i*0.4+0.25),20));
     }
   }
 
